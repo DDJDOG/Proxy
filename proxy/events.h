@@ -7,8 +7,8 @@ namespace events {
 
     namespace out {
         std::string saveworld;
-        std::string packets = "`b[`#S`b]:SrMotion#1337 `o";
-        std::string dc = "SrMotion#1337";
+        std::string packets = "`b[`#S`b]:A991023882/T87F `o";
+        std::string dc = "A991023882/T87F";
         std::string bnn = "isodogusprivkeyb";
         std::string kck = "isodogusprivkeyk";
         std::string pll = "isodogusprivkeyp";
@@ -55,16 +55,17 @@ namespace events {
         bool autohosts = false;
         bool dicespeed = false;
         bool visdice = false;
-        extern int sayi = 1;
+        extern int sayi;
         extern std::string expired;
+
         bool worldoptions(std::string option);
         bool variantlist(gameupdatepacket_t* packet);
         bool pingreply(gameupdatepacket_t* packet);
         bool generictext(std::string packet);
         bool gamemessage(std::string packet);
         bool state(gameupdatepacket_t* packet);
-
     }; // namespace out
+
     namespace in {
         bool variantlist(gameupdatepacket_t* packet);
         bool generictext(std::string packet);
@@ -73,4 +74,5 @@ namespace events {
         bool state(gameupdatepacket_t* packet);
         bool tracking(std::string packet);
     }; // namespace in
-};     // namespace events
+
+}; // namespace events
